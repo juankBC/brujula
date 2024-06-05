@@ -1,3 +1,61 @@
+let angulos = 0
 basic.forever(function () {
-    basic.showNumber(input.compassHeading())
+    if (angulos == 0) {
+        basic.showString("" + (angulos))
+        basic.showArrow(ArrowNames.North)
+        basic.clearScreen()
+        basic.showString("N")
+        basic.pause(200)
+        basic.clearScreen()
+    } else if (angulos > 0 && angulos < 90) {
+        basic.showString("" + (angulos))
+        basic.showArrow(ArrowNames.NorthEast)
+        basic.clearScreen()
+        basic.showString("NE")
+        basic.pause(200)
+        basic.clearScreen()
+    } else if (angulos == 90) {
+        basic.showString("" + (angulos))
+        basic.showArrow(ArrowNames.East)
+        basic.clearScreen()
+        basic.showString("E")
+        basic.pause(200)
+        basic.clearScreen()
+    } else if (angulos > 90 && angulos < 180) {
+        basic.showString("" + (angulos))
+        basic.showArrow(ArrowNames.SouthEast)
+        basic.clearScreen()
+        basic.showString("SE")
+        basic.pause(200)
+        basic.clearScreen()
+    } else if (angulos == 180) {
+        basic.showString("" + (angulos))
+        basic.showArrow(ArrowNames.South)
+        basic.clearScreen()
+        basic.showString("S")
+        basic.pause(200)
+        basic.clearScreen()
+    } else if (angulos > 180 && angulos < 270) {
+        basic.showString("" + (angulos))
+        basic.showArrow(ArrowNames.SouthWest)
+        basic.clearScreen()
+        basic.showString("SO")
+        basic.pause(200)
+        basic.clearScreen()
+    } else if (angulos == 270) {
+        basic.showString("" + (angulos))
+        basic.showArrow(ArrowNames.West)
+        basic.clearScreen()
+        basic.showString("O")
+        basic.pause(200)
+        basic.clearScreen()
+    } else {
+        basic.showString("" + (angulos))
+        basic.showArrow(ArrowNames.NorthWest)
+        basic.clearScreen()
+        basic.showString("NO")
+        basic.pause(200)
+        basic.clearScreen()
+    }
+    angulos = input.compassHeading()
 })
